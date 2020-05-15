@@ -1,7 +1,12 @@
-var cacheName = "sw-v1";
-var filesToCache = ["./", "./index.html", "./styles.css"];
+var cacheName = "sw-v4";
+var filesToCache = [
+  "./",
+  "./index.html",
+  "./styles.css",
+  "https://jsonplaceholder.typicode.com/users",
+];
 self.addEventListener("install", function (e) {
-  console.log("[ServiceWorker] Install");
+  console.log("[ServiceWorker] Install v4");
   e.waitUntil(
     caches.open(cacheName).then(function (cache) {
       console.log("[ServiceWorker] Caching app shell");
@@ -13,12 +18,6 @@ self.addEventListener("activate", (event) => {
   event.waitUntil(self.clients.claim());
 });
 self.addEventListener("fetch", (event) => {
-  /* event.respondWith(
-    caches.match(event.request, { ignoreSearch: true }).then((response) => {
-      return response || fetch(event.request);
-    })
-  ); */
-
   event.respondWith(
     (async function () {
       var cache = await caches.open(cacheName);

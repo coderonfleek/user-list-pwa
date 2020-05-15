@@ -1,0 +1,26 @@
+{
+  "name": "user-list-pwa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderonfleek/user-list-pwa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coderonfleek/user-list-pwa/issues"
+  },
+  "homepage": "https://github.com/coderonfleek/user-list-pwa#readme",
+  "devDependencies": {
+    "@testing-library/dom": "^7.5.6",
+    "@testing-library/jest-dom": "^5.7.0",
+    "jest": "^26.0.1",
+    "jsdom": "^16.2.2"
+  }
+}

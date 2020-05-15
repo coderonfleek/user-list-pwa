@@ -12,3 +12,24 @@ if ("serviceWorker" in navigator) {
     );
   });
 }
+
+document.addEventListener("DOMContentLoaded", loadUsers);
+
+const url = "https://jsonplaceholder.typicode.com/users";
+
+async function loadUsers() {
+  const userList = document.getElementById("userList");
+  const users = await (await fetch(url)).json();
+
+  console.log(users);
+
+  let userItems = "";
+
+  users.forEach((user) => {
+    let listItem = document.createElement("li");
+
+    listItem.innerHTML = user.name;
+
+    userList.appendChild(listItem);
+  });
+}

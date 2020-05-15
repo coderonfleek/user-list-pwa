@@ -1,3 +1,14 @@
-h1 {
-  color: red;
+h2 {
+  color: blue;
+  padding: 5px;
+}
+
+li {
+  list-style-type: none;
+  padding-bottom: 7px;
+  font-family: Arial;
+  font-size: 1.1em;
+  border-bottom: 1px solid #ccc;
+  width: 80%;
+  margin-bottom: 5px;
 }
