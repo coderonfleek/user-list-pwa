@@ -22,6 +22,6 @@
     "@testing-library/jest-dom": "^5.7.0",
     "firebase-tools": "^8.2.0",
     "jest": "^26.0.1",
-    "jsdom": "^16.2.2"
+    "jsdom": "^16.5.0"
   }
 }
